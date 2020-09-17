@@ -1,16 +1,3 @@
-.body {
-    background-color: lightblue;
-  }
-  
-  .h1 {
-    color: navy;
-    margin-left: 20px;
-  }
-  .footer {
-    background-color: lightblue;
-  }
-  
-  .header {
-    color: navy;
-    margin-left: 20px;
-  }
+#homeimg{
+  image-resolution: 400px, 400px;
+}
