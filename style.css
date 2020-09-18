@@ -1,0 +1,26 @@
+html, body{
+    margin: 0;
+
+   
+}
+#img1{
+  flex-direction: column;
+  height: 400px;
+  width: 600px;
+}
+
+#homeimg{
+  flex-direction: column;
+  height: 100px;
+  width: 400px;
+}
+
+#container1{
+  margin:0;
+  background-color:rgb(255, 240, 238);
+}
+#container2{
+ 
+  margin:0;
+  background-color:rgb(255, 240, 238);
+  }
