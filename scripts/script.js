@@ -11,7 +11,11 @@ var activities = "category_slugs=activities-events, bars-clubs, bowling, dance-c
 var queryUrl = "https://api.discountapi.com/v2/deals?" + activities + "&api_key=" + apiKey; 
 var apiKey = "uFVXWRdL";
 
-// ALL categorySlugs = category_slugs=activities-events, adult, audio, automotive, automotive-services, baby, 
+var i = 0; // This is the counter so that the user can click a button to retrieve a new deal.
+
+// Here is the list of all category slugs. The api only lets you query up to 20 category slugs. If we want them
+// to access all category, simply query deals with no parameters.
+//  category_slugs=activities-events, adult, audio, automotive, automotive-services, baby, 
 //bars-clubs, beauty_health, boot-camp, bowling, bridal, chiropractic, city-tours, clothing, college, comedy-clubs, 
 //concerts, crafts_hobbies, dance-classes, dental, dermatology, dining-nightlife, electronics, eye-vision, facial, 
 //fashion-accessories, fitness, fitness_product, fitness_classes, food_alcohol, food-grocery, gay, gifts, golf, gym, 
@@ -21,25 +25,38 @@ var apiKey = "uFVXWRdL";
 //retail-services, skiing, skydiving, spa, special-interest, sporting-events, tanning, teeth-whitening, theater, tools, 
 //toys, travel, treats, unknown, wine-tasting, womens-clothing, women_fashion, yoga
 
-$.ajax({
-    url: queryUrl,
-    method: "GET"
-}).then(function(response){
-    console.log(response);
-    
-    var description = response.deals[0].deal.short_title;
-    var percentOff = ((response.deals[0].deal.discount_percentage)*100).toFixed(0);    
-    var expiration = response.deals[0].deal.expires_at; // Will have to fix formatting if we use this
-    var imgUrl = response.deals[0].deal.image_url;
-    var dealUrl = response.deals[0].deal.url;
+// This is the function to get deals
+function getDeals(i){
+    $.ajax({
+        url: queryUrl,
+        method: "GET"
+    }).then(function(response){
+        console.log(response);
+        
+        var description = response.deals[i].deal.short_title;
+        var percentOff = ((response.deals[i].deal.discount_percentage)*100).toFixed(0);    
+        var expiration = response.deals[i].deal.expires_at; // Will have to fix formatting if we use this
+        var imgUrl = response.deals[i].deal.image_url;
+        var dealUrl = response.deals[i].deal.url;
 
-    $("#test h2").text(description);
-    $("#expiration").text("Expires on: " + expiration);
-    $("#percent").text(percentOff + "% off!");
-    var imgElement = $("<img>").attr({src: imgUrl, alt: "Product image"});
-    $("#test").append(imgElement);
-    $("#product-url").attr("href", dealUrl);
-    
+        // This callback sets the page content
+        function displayNewDeal(){
+            $("#test h2").text(description);
+            $("#expiration").text("Expires on: " + expiration);
+            $("#percent").text(percentOff + "% off!");
+            $("#image").attr({src: imgUrl, alt: "deal image"});
+            $("#product-url").attr("href", dealUrl);
+        };
+        displayNewDeal();
+    });
+};
+getDeals(i);
+
+// This click event allows the user to generate a new deal, up to 20 max. 
+$("#button").on("click", function(event){
+    i++;    // This will need a restriction: if i > 19, they can't click anymore, and it takes them back to i=0 deal
+    console.log(i);
+    getDeals(i);
 });
 
 // Use these functions to get user lat and lon
