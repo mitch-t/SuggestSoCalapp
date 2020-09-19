@@ -1,9 +1,17 @@
 $(document).ready(function() {
 
-var queryUrl = "https://api.discountapi.com/v2/deals?location=33.980602, -117.375496&api_key=" + apiKey; 
+// var userLocation = "location=" + lat + ", " + lon; This variable would be inserted into the queryUrl if location is relevant to the deal search.
+
+// Search by category_slug
+var shopping = "category_slugs=baby, bridal, clothing, electronics, fashion-accessories, gay, gifts, home_goods, jewish, kids, kitchen, makeup, mens-clothing, movies_music_games, office_supplies, pets, product, tools, toys, womens-clothing";
+var wellness = "category_slugs=beauty_health, chiropractic, dental, dermatology, eye-vision, facial, fitness, fitness_classes, gym, hair-removal, hair-salon, health-beauty, manicure-pedicure, massage, personal-training, pilates, spa, tanning, teeth-whitening, yoga";
+var activities = "category_slugs=activities-events, bars-clubs, bowling, dance-classes, city-tours, comedy-clubs, concerts, life-skills-classes, museums, outdoor_adventures, skiing, skydiving, sporting-events, theater, travel, wine-tasting, martial-arts";
+
+// var queryUrl = "https://api.discountapi.com/v2/deals?location=33.980602, -117.375496&api_key=" + apiKey; 
+var queryUrl = "https://api.discountapi.com/v2/deals?" + activities + "&api_key=" + apiKey; 
 var apiKey = "uFVXWRdL";
 
-// categorySlugs = category_slugs=activities-events, adult, audio, automotive, automotive-services, baby, 
+// ALL categorySlugs = category_slugs=activities-events, adult, audio, automotive, automotive-services, baby, 
 //bars-clubs, beauty_health, boot-camp, bowling, bridal, chiropractic, city-tours, clothing, college, comedy-clubs, 
 //concerts, crafts_hobbies, dance-classes, dental, dermatology, dining-nightlife, electronics, eye-vision, facial, 
 //fashion-accessories, fitness, fitness_product, fitness_classes, food_alcohol, food-grocery, gay, gifts, golf, gym, 
@@ -18,22 +26,11 @@ $.ajax({
     method: "GET"
 }).then(function(response){
     console.log(response);
-    console.log(response.deals[0].deal.category_name);
     
-    console.log(response.deals[0].deal.short_title);
     var description = response.deals[0].deal.short_title;
-
-    console.log(response.deals[0].deal.discount_amount);
-    console.log(response.deals[0].deal.discount_percentage);
-    var percentOff = ((response.deals[0].deal.discount_percentage)*100).toFixed(0);
-
-    console.log(response.deals[0].deal.expires_at);
-    var expiration = response.deals[0].deal.expires_at;
-
-    console.log(response.deals[0].deal.image_url);
+    var percentOff = ((response.deals[0].deal.discount_percentage)*100).toFixed(0);    
+    var expiration = response.deals[0].deal.expires_at; // Will have to fix formatting if we use this
     var imgUrl = response.deals[0].deal.image_url;
-
-    console.log(response.deals[0].deal.url);
     var dealUrl = response.deals[0].deal.url;
 
     $("#test h2").text(description);
@@ -57,16 +54,19 @@ function getLocation() {
   };
 };
 getLocation();
-
-function showPosition(position) {
+    // showPosition is a callback for when the getCurrentPosition is successful (i.e., the user accepts location permissions and the browser is compatible)
+function showPosition(position) { 
   location.innerHTML = "Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude;
-  console.log(position.coords.longitude);
-  // Create variables to hold user lat and lon
+  var lat = position.coords.latitude;
+  var lon = position.coords.longitude;
+  test(lat, lon);   // Have these location functions get triggered by certain user criteria and communicate with another function that needs the lat and lon
+};
+
+function test(lat, lon){
+    console.log("Your coordinates are latitude: " + lat + "and longitude: " + lon);
 };
 
 
 
-
-
-});
+}); //document.ready end brackets
