@@ -1,0 +1,45 @@
+body{
+  background-color: rgb(255, 240, 238);
+}
+#container1{
+  margin:0;
+  background-color:rgb(255, 240, 238);
+}
+.col{
+  font: bold;
+}
+.waves-effect{
+  margin-left: 125px;
+}
+#img1{
+  margin-left: 15px;
+  height: 480px;
+  width: 680px;
+}
+
+#img2{
+  margin-top:25px;
+  height: 200px;
+  width: 400px;
+}
+#container2{
+  margin-left: 200px;
+}
+.card-action{
+  font-size: 65px;
+}
+.card-content{
+  font-size: 25px;
+}
+#img3{
+  height:400px;
+  width: 598px;
+}
+#img4{
+  height:400px;
+  width: 598px;
+}
+#img5{
+  height:400px;
+  width: 598px;
+}
