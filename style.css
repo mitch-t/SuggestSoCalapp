@@ -38,11 +38,12 @@ h1{
   margin-left: 200px;
   margin-top:6%;
 }
-.deal-color{
+/* .deal-color{
   color: #26a69a;
-}
-.card-action{
+} */
+#next, #back{
   font-size: 40px;
+  color: #26a69a;
 }
 .card-content{
   font-size: 30px;
