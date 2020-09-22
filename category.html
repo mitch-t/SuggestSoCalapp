@@ -1,107 +1,108 @@
 <!DOCTYPE html>
 
 <html lang="en-US">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>WHATTODO.COM</title>
- 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggest Southern California</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
 <body>
-  <header>
-    <nav>
-   <div class="nav-wrapper teal darken-4">
-     <a href="index.html" class="brand-logo"><i class="material-icons">WHATTODO.COM</a>
-     <ul class="right hide-on-med-'and-down">
-
-     </ul>
-   </div>
- </nav>
- </header>
- 
-  <div class="container" id="container2">
-      <div class="row">
-            <div class="col s3 l4">
-              <div class="card">
-                <div class="card-image">
-                  <img id="img3" src="assets/images/concert.jpg">
-                </div>
-                <div class="card-content">
-                  <p>Deals for your next concert, movie night, or family outing.</p>
-                </div>
-                <div class="card-action">
-                  <a class="deal-color" id="next" href="fun.html">Entertainment</a>
-                </div>
-              </div>
+    <header>
+        <nav>
+            <div class="nav-wrapper teal darken-4">
+                <a href="index.html" class="brand-logo"><i class="material-icons">SuggestSoCal!</a>
             </div>
-            <div class="col s3 l4">
-              <div class="card push-l10">
-                <div class="card-image">
-                  <img id="img4" src="assets/images/dining.jpg">
-                </div>
-                <div class="card-content">
-                  <p>I want to have a delicious meal for a low price.</p>
-                </div>
-                <div class="card-action">
-                  <a class="deal-color" id="next" href="meal.html">Dining</a>
-                </div>
-              </div>
-            </div>
+        </nav>
+    </header>
 
-            <!--SHOPPING-->
-            <div class="col s3 l4">
-              <div class="card shopping">
-                <div class="card-image">
-                  <a href="#" id="link" target="_blank">
-                  <img id="img5" src="assets/images/retail-mall-shopping.jpg" alt="image of mall" onerror="this.onerror=null; this.src='https:\/\/www.amgraphretail.com/wp-content/uploads/2016/04/retail-mall-shopping.jpg'">
-                  </a>
-                </div>
-                <div class="card-content">
-                  <p id="text">Save on all your favorite items.</p>
-                </div>
-                <div class="card-action">
-                  <a class="deal-color" id="next" href="#">Shopping</a>
-                </div>
-                <div class="card-action">
-                  <a class="deal-color" id="back" href="#">Previous</a>   
-                </div>
-                </div>
-              </div>
+    <div class="row">
 
-              <!--WELLNESS-->
-              <div class="col s3 l4">
-                <div class="card wellness">
-                  <div class="card-image">
-                    <a href="#" id="link" target="_blank">
-                    <img id="img6" src="assets/images/wellness.jpg" alt="image of candles and towels" onerror="this.onerror=null; this.src='https:\/\/www.amgraphretail.com/wp-content/uploads/2016/04/retail-mall-shopping.jpg'">
-                    </a>
-                  </div>
-                  <div class="card-content">
-                    <p id="text">Movement, relaxation and rejuvenation.</p>
-                  </div>
-                  <div class="card-action">
-                    <a class="deal-color" id="next" href="#">Wellness</a>
-                  </div>
-                  <div class="card-action">
-                    <a class="deal-color" id="back" href="#">Previous</a>   
-                  </div>
-                  </div>
+        <!--ENTERTAINMENT-->
+        <div class="col s12 m6 l3">
+            <div class="card entertainment card_size">
+                <h2 class="center">Entertainment</h2>
+                <hr>
+                <div class="flex-container">
+                    <button class="button" id="next">Suggest!</button>
                 </div>
-
+                <a href="#" id="link" target="_blank">
+                    <img class="card-image" id="img3" src="assets/images/concert.jpg" alt="image of concert"
+                        onerror="if (this.src != 'assets/images/concert.jpg') this.src = 'assets/images/concert.jpg';">
+                </a>
+                <hr>
+                <p id="text">Are you looking for a show, concert, or sporting event? Check these out!</p>
             </div>
         </div>
-          </div>
-        </div>                                
-</div>
-</div>
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<script src="scripts/script.js"></script>
+
+        <!--Shopping-->
+        <div class="col s12 m6 l3">
+            <div class="card shopping card_size">
+                <h2 class="center">Shopping</h2>
+                <hr>
+                <div class="flex-container">
+                    <button class="button" id="next">Suggest!</button>
+                </div>
+                <a href="#" id="link" target="_blank">
+                    <img id="img5" src="assets/images/retail-mall-shopping.jpg" alt="image of mall"
+                        onerror="if (this.src != 'assets/images/retail-mall-shopping.jpg') this.src = 'assets/images/retail-mall-shopping.jpg';">
+                </a>
+                <hr>
+                <p id="text">Save on some unique gifts and services!</p>
+            </div>
+        </div>
+
+
+
+        <!--DINING-->
+        <div class="col s12 m6 l3">
+            <div class="card dining card_size">
+                <h2 class="center">Dining</h2>
+                <hr>
+                <div class="flex-container">
+                    <button class="button" id="next">Suggest!</button>
+                </div>
+                <a href="#" id="link" target="_blank">
+                    <img id="img4" src="assets/images/dining.jpg" alt="image of dinner"
+                        onerror="if (this.src != 'assets/images/dining.jpg') this.src = 'assets/images/dining.jpg';">
+                </a>
+                <hr>
+                <p id="text">You hungry? We got you covered! Check out these restaurants!</p>
+                <p id="rating"></p>
+            </div>
+        </div>
+
+        <!--Wellness-->
+        <div class="col s12 m6 l3">
+            <div class="card wellness card_size">
+                <h2 class="center">Wellness</h2>
+                <hr>
+                <div class="flex-container">
+                    <button class="button" id="next">Suggest!</button>
+                </div>
+                <a href="#" id="link" target="_blank">
+                    <img id="img6" src="assets/images/wellness.jpg" alt="image of candles and towels"
+                        onerror="if (this.src != 'assets/images/wellness.jpg') this.src = 'assets/images/wellness.jpg';">
+                </a>
+                <hr>
+                <p id="text">Treat yourself! Move, relax, and rejuvenate.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
