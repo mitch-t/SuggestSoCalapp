@@ -41,12 +41,13 @@ h1{
 /* .deal-color{
   color: #26a69a;
 } */
+
 #next, #back{
-  font-size: 40px;
+  font-size: 40px;    /*font size media query*/
   color: #26a69a;
 }
 .card-content{
-  font-size: 30px;
+  font-size: 30px;    /*font size media query*/
 }
 #img3{
  display:block;
