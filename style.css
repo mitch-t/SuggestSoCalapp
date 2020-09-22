@@ -38,16 +38,13 @@ h1{
   margin-left: 200px;
   margin-top:6%;
 }
-/* .deal-color{
-  color: #26a69a;
-} */
 
 #next, #back{
-  font-size: 40px;    /*font size media query*/
+  font-size: 40px;   
   color: #26a69a;
 }
 .card-content{
-  font-size: 30px;    /*font size media query*/
+  font-size: 30px;   
 }
 #img3{
  display:block;
@@ -103,4 +100,9 @@ display:block;
   margin-right:40px;
   color: black;
   font-size: 35px;
+}
+
+li{
+  margin-right: 15%;
+  background-color:#26a69a;
 }

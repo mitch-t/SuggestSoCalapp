@@ -17,27 +17,25 @@
   <header>
     <nav>
    <div class="nav-wrapper teal darken-4">
-     <a href="index.html" class="brand-logo"><i class="material-icons">WHATTODO.COM</a>
-     <ul class="right hide-on-med-'and-down">
-
+     <a href="index.html" class="brand-logo hide-on-small-only"><i class="material-icons">WHATTODO.COM</a>
+     <ul class="right">
+       <li><input type="text"  id="city" placeholder="Your location here"></li>
      </ul>
    </div>
  </nav>
  </header>
   <div class="container" id="container2">
       <div class="row">
-
             <!--ENTERTAINMENT-->
             <div class="col s12 m6 l3">
               <div class="card entertainment">
                 <div class="card-image">
                   <a href="#" id="link" target="_blank">
-                    <img id="img3" src="assets/images/concert.jpg" alt="image of concert" onerror="this.onerror=null; this.src='assets/images/concert.jpg'">
-                    </a>
+                    <img id="img3" src="assets/images/concert.jpg" alt="image of concert" onerror="if (this.src != 'assets/images/concert.jpg') this.src = 'assets/images/concert.jpg';"> 
+                  </a>
                 </div>
                 <div class="card-content">
-                  <p id="text">Deals for your next concert, movie night, or family outing.</p>
-                  <input type="text" id="city" placeholder="Type your city" size="10">
+                  <p id="text">Deals for your next concert or event. Enter your location above.</p>
                 </div>
                 <div class="card-action">
                   <a class="deal-color" id="next" href="#">Entertainment</a>
@@ -53,11 +51,11 @@
               <div class="card dining">
                 <div class="card-image">
                   <a href="#" id="link" target="_blank">
-                    <img id="img3" src="assets/images/dining.jpg" alt="image of dinner" onerror="this.onerror=null; this.src='assets/images/dining.jpg'">
+                    <img id="img4" src="assets/images/dining.jpg" alt="image of dinner" onerror="if (this.src != 'assets/images/dining.jpg') this.src = 'assets/images/dining.jpg';">           
                   </a>
                 </div>
                 <div class="card-content">
-                  <p id="text">I want to have a delicious meal for a low price.</p>
+                  <p id="text">I want to have a delicious meal at a well rated restaurant.</p>
                 </div>
                 <div class="card-action">
                   <a class="deal-color" id="next" href="#">Dining</a>
@@ -73,11 +71,11 @@
               <div class="card shopping">
                 <div class="card-image">
                   <a href="#" id="link" target="_blank">
-                  <img id="img5" src="assets/images/retail-mall-shopping.jpg" alt="image of mall" onerror="this.onerror=null; this.src='assets/images/retail-mall-shopping.jpg'">
-                  </a>
+                  <img id="img5" src="assets/images/retail-mall-shopping.jpg" alt="image of mall" onerror="if (this.src != 'assets/images/retail-mall-shopping.jpg') this.src = 'assets/images/retail-mall-shopping.jpg';">     
+                </a>
                 </div>
                 <div class="card-content">
-                  <p id="text">Save on all your favorite items.</p>
+                  <p id="text">Save on all your favorite items and services.</p>
                 </div>
                 <div class="card-action">
                   <a class="deal-color" id="next" href="#">Shopping</a>
@@ -93,8 +91,8 @@
                 <div class="card wellness">
                   <div class="card-image">
                     <a href="#" id="link" target="_blank">
-                    <img id="img6" src="assets/images/wellness.jpg" alt="image of candles and towels" onerror="this.onerror=null; this.src='assets/images/wellness.jpg'">
-                    </a>
+                    <img id="img6" src="assets/images/wellness.jpg" alt="image of candles and towels" onerror="if (this.src != 'assets/images/wellness.jpg') this.src = 'assets/images/wellness.jpg';">
+                  </a>
                   </div>
                   <div class="card-content">
                     <p id="text">Movement, relaxation and rejuvenation.</p>
@@ -107,14 +105,8 @@
                   </div>
                   </div>
                 </div>
-
             </div>
         </div>
-          </div>
-        </div>                                
-</div>
-</div>
-</div>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="scripts/script.js"></script>
 </body>
