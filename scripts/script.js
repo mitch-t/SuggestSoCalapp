@@ -6,7 +6,7 @@ $(document).ready(function() {
     var queryDining = "https://developers.zomato.com/api/v2.1/location_details?entity_id=281&entity_type=city&apikey=278895572b867605262933245620ff46";
     var apiKey = "uFVXWRdL";
     var i = -1;
-    
+
     // This is the function to call dining and restaurant recommendations
       function getDinner(i) {
         $.ajax({
@@ -35,17 +35,6 @@ $(document).ready(function() {
         i++;
         if (i > 9) {
           i = 0;
-          getDinner(i);
-        } else {
-          getDinner(i);
-        }
-      });
-      // This click handler allows the user to go back one deal at a time.
-      $(".dining #back").on("click", function (event) {
-        event.preventDefault();
-        i--;
-        if (i < 0) {
-          i = 9;
           getDinner(i);
         } else {
           getDinner(i);
@@ -90,18 +79,6 @@ $(document).ready(function() {
         };
     });
     
-    // This click handler allows the user to go back one event at a time.
-    $(".entertainment #back").on("click", function(event){
-        event.preventDefault();
-        i--;
-        if (i < 0){
-            i = 9;
-            getEntertainment(i);
-        } else {
-            getEntertainment(i);
-        };
-    });
-    
     // This is the function to get wellness deals
     function getWell(i){
         $.ajax({
@@ -130,18 +107,6 @@ $(document).ready(function() {
             getWell(i);
         } else {
         getWell(i);
-        };
-    });
-    
-    // This click handler allows the user to go back one deal at a time.
-    $(".wellness #back").on("click", function(event){
-        event.preventDefault();
-        i--;
-        if (i < 0){
-            i = 19;
-            getWell(i);
-        } else {
-            getWell(i);
         };
     });
     
@@ -175,17 +140,5 @@ $(document).ready(function() {
         } else {
         getDeals(i);
         };
-    });
-    
-    // This click handler allows the user to go back one deal at a time.
-    $(".shopping #back").on("click", function(event){
-        event.preventDefault();
-        i--;
-        if (i < 0){
-            i = 19;
-            getDeals(i);
-        } else {
-            getDeals(i);
-        };
-    });
-    });
+    });    
+});
