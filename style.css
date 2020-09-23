@@ -20,9 +20,7 @@
   .col{
     font: bold;
   }
-  .waves-effect{
-    margin-left: 215px;
-  }
+
   #img1{
     margin-left: 35px;
     height: 480px;
@@ -127,8 +125,11 @@
   }
   .button:focus {
     background-color: #004d40;
-}
+  }
   
+  a {
+    color:white;
+  }
 
   .entertainment p, .dining p, .shopping p, .wellness p {
       font-size: x-large;
