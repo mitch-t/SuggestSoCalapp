@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
     var wellness = "category_slugs=beauty_health, chiropractic, dental, dermatology, eye-vision, facial, fitness, fitness_classes, gym, hair-removal, hair-salon, health-beauty, manicure-pedicure, massage, personal-training, pilates, spa, tanning, teeth-whitening, yoga";
     var queryShopping = "https://api.discountapi.com/v2/deals?&api_key=" + apiKey; 
     var queryWellness = "https://api.discountapi.com/v2/deals?" + wellness + "&api_key=" + apiKey; 
@@ -22,7 +23,7 @@ $(document).ready(function() {
           function displayNewDinner() {
             $(".dining #text").text(resName);
             $(".dining #rating").text("Rating: " + resRating + "/5");
-            $("#img4").attr({src: imgUrl, alt: "restaurant image"});
+            $("#dining_card").attr({src: imgUrl, alt: "restaurant image"});
             $(".dining #link").attr("href", menuUrl);
           };
           displayNewDinner();
@@ -59,7 +60,7 @@ $(document).ready(function() {
             // This callback sets the page content
             function displayNewDeal(){
                 $(".entertainment #text").text(eventName);
-                $("#img3").attr({src: eventPicture, alt: "event image"});
+                $("#entertainment_card").attr({src: eventPicture, alt: "event image"});
                 $(".entertainment #link").attr("href", eventSales);
             };
             displayNewDeal();
@@ -91,7 +92,7 @@ $(document).ready(function() {
             // This callback sets the page content
             function displayNewDeal(){
                 $(".wellness #text").text(description);
-                $("#img6").attr({src: imgUrl, alt: "deal image"});
+                $("#wellness_card").attr({src: imgUrl, alt: "deal image"});
                 $(".wellness #link").attr("href", dealUrl);
             };
             displayNewDeal();
@@ -123,7 +124,7 @@ $(document).ready(function() {
     // This callback sets the page content
             function displayNewDeal(){
                 $(".shopping #text").text(description);
-                $("#img5").attr({src: imgUrl, alt: "deal image"});
+                $("#shopping_card").attr({src: imgUrl, alt: "deal image"});
                 $(".shopping #link").attr("href", dealUrl);
             };
             displayNewDeal();
