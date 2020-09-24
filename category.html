@@ -11,31 +11,41 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="nav-wrapper teal darken-4">
-                <a href="index.html" class="brand-logo"><i class="material-icons">SuggestSoCal!</a>
+            <div class="nav-wrapper teal darken-4 center">
+                <a href="index.html" class="suggestSoCal"><i class="far fa-sun"></i>SuggestSoCal!</a><i class="fas fa-umbrella-beach"></i>
             </div>
         </nav>
     </header>
 
-    <div class="row">
+    <div class="col s12">
+        <div class="card">
+            <div class="card-content center">
+                <h4>Welcome! Click on an image to visit the vendor site.</h4>
+            </div>
+        </div>
+    </div>
 
-        <!--ENTERTAINMENT-->
+    <div class="row">
+        
+        <!--ENTERTAINMENT CARD-->
         <div class="col s12 m6 l3">
             <div class="card entertainment card_size">
                 <h2 class="center">Entertainment</h2>
                 <hr>
                 <div class="flex-container">
-                    <button class="button" id="next">Suggest!</button>
+                    <button class="button" id="next">Suggest! <i class="fas fa-ticket-alt"></i></button>
                 </div>
                 <a href="#" id="link" target="_blank">
-                    <img class="card-image" id="img3" src="assets/images/concert.jpg" alt="image of concert"
+                    <img class="card_imgs" id="entertainment_card" src="assets/images/concert.jpg"
+                        alt="image of concert"
                         onerror="if (this.src != 'assets/images/concert.jpg') this.src = 'assets/images/concert.jpg';">
                 </a>
                 <hr>
@@ -43,16 +53,17 @@
             </div>
         </div>
 
-        <!--Shopping-->
+        <!--SHOPPING CARD-->
         <div class="col s12 m6 l3">
             <div class="card shopping card_size">
                 <h2 class="center">Shopping</h2>
                 <hr>
                 <div class="flex-container">
-                    <button class="button" id="next">Suggest!</button>
+                    <button class="button" id="next">Suggest! <i class="fas fa-tag"></i></button>
                 </div>
                 <a href="#" id="link" target="_blank">
-                    <img id="img5" src="assets/images/retail-mall-shopping.jpg" alt="image of mall"
+                    <img class="card_imgs" id="shopping_card" src="assets/images/retail-mall-shopping.jpg"
+                        alt="image of mall"
                         onerror="if (this.src != 'assets/images/retail-mall-shopping.jpg') this.src = 'assets/images/retail-mall-shopping.jpg';">
                 </a>
                 <hr>
@@ -60,18 +71,16 @@
             </div>
         </div>
 
-
-
-        <!--DINING-->
+        <!--DINING CARD-->
         <div class="col s12 m6 l3">
             <div class="card dining card_size">
                 <h2 class="center">Dining</h2>
                 <hr>
                 <div class="flex-container">
-                    <button class="button" id="next">Suggest!</button>
+                    <button class="button" id="next">Suggest! <i class="fas fa-utensils"></i></button>
                 </div>
                 <a href="#" id="link" target="_blank">
-                    <img id="img4" src="assets/images/dining.jpg" alt="image of dinner"
+                    <img class="card_imgs" id="dining_card" src="assets/images/dining.jpg" alt="image of dinner"
                         onerror="if (this.src != 'assets/images/dining.jpg') this.src = 'assets/images/dining.jpg';">
                 </a>
                 <hr>
@@ -80,29 +89,28 @@
             </div>
         </div>
 
-        <!--Wellness-->
+        <!--WELLNESS CARD-->
         <div class="col s12 m6 l3">
             <div class="card wellness card_size">
                 <h2 class="center">Wellness</h2>
                 <hr>
                 <div class="flex-container">
-                    <button class="button" id="next">Suggest!</button>
+                    <button class="button" id="next">Suggest! <i class="fas fa-spa"></i></button>
                 </div>
                 <a href="#" id="link" target="_blank">
-                    <img id="img6" src="assets/images/wellness.jpg" alt="image of candles and towels"
+                    <img class="card_imgs" id="wellness_card" src="assets/images/wellness.jpg"
+                        alt="image of candles and towels"
                         onerror="if (this.src != 'assets/images/wellness.jpg') this.src = 'assets/images/wellness.jpg';">
                 </a>
                 <hr>
                 <p id="text">Treat yourself! Move, relax, and rejuvenate.</p>
             </div>
         </div>
-
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="scripts/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
