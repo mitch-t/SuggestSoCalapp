@@ -39,8 +39,7 @@ The website meets all of the project requirements including the following:
 ## Getting started and deployment
 
 This site can be accessed by clicking the link below:
-
-https://rkraeher.github.io/SuggestSoCal/
+https://mitch-t.github.io/suggestsocalapp/
 
 ## Built With
 * HTML
